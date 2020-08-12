@@ -14,12 +14,12 @@ class App extends Component {
       },
       {
         id: 2,
-        title: 'Take out the trash',
+        title: 'Dinner with wife',
         completed: false
       },
       {
         id: 3,
-        title: 'Take out the trash',
+        title: 'Meeting with boss',
         completed: false
       }
     ]
@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Todos />
+        <Todos todos={this.state.todos} />
       </div>
     );
   }
