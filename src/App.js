@@ -15,7 +15,7 @@ class App extends Component {
       {
         id: 2,
         title: 'Dinner with wife',
-        completed: true
+        completed: false
       },
       {
         id: 3,
@@ -25,8 +25,16 @@ class App extends Component {
     ]
   }
 
-  markComplete = () => {
-    console.log('from app.js')
+  //toggle Complete
+  markComplete = (id) => {
+    this.setState({
+      todos: this.state.todos.map(todo => {
+        if (todo.id === id) {
+          todo.completed = !todo.completed
+        }
+        return todo;
+      })
+    });
   }
 
   render() {
