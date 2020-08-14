@@ -28,9 +28,10 @@ export class AddTodo extends Component {
 
                 <input
                     type="Submit"
-                    value="Submit"
-                    ClassName="btn"
+                    // value="Submit"
+                    className="btn"
                     style={{ flex: '1' }}
+                    onSubmit={this.onSubmit}
                 />
             </form>
         )
